@@ -25,7 +25,20 @@
   from, to { border-color: transparent }
   50% { border-color: transparent ; }
 }
-
+.section #home{
+    background: linear-gradient(to bottom, rgba($primary , 0.1) 30%, $white 100%);
+}
+#home{
+    height:50vh;
+}
+.home-image{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content:flex-end;
+    position: absolute;
+    right:-10%;
+}
 ul, li{
   list-style: none;
   padding: 0;
@@ -39,7 +52,6 @@ ul, li{
   padding: 3rem 0;
 }
 .wrapper{
-  background: #eaf6ff;
   padding: 2rem;
   border-radius: 15px;
 }
@@ -123,16 +135,18 @@ p{
     <!-- END NAVBAR -->
 
     <!--START HOME-->
-    <section class="bg-home-6 section " id="home">
-        <div class="bg-overlay-black"></div>
+    <section class=" section  " id="home">
+        <div class="bg-overlay home-container"></div>
         <div class="container">
 
             <div class="row justify-content-center pt-5 mt-4">
                 <div class="col-lg-5 text-center">
-                    <h1 class="home-title text-white">Enterprise learning, training, <br>and development.
+                    <h1 class="home-title text-blue">Enterprise learning, training, <br>and development.
                     </h1>
                 </div>
-
+                <div class="col-lg-5 text-center">
+                    <img class="home-image" src="../HTML/images/bg-3.png" alt="medical">
+                </div>
             </div>
         </div>
         </div>
@@ -177,7 +191,7 @@ p{
     </section>
     <!-- END CLIENT LOGO -->
 
-    <div class="section p-0 bg-gradient">
+    <div class="section p-0 body-bg">
         <div class="container ">
             <div class="row justify-content-center">
                 <div class="col-md-7">
