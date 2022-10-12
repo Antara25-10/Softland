@@ -42,63 +42,32 @@
 ul, li{
   list-style: none;
   padding: 0;
+  border:none;
 }
 
-.timeline-container{
+.flex-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  padding: 3rem 0;
+  flex-direction: row;
 }
-.wrapper{
-  padding: 2rem;
-  border-radius: 15px;
-}
-h1{
-  font-size: 1.1rem;
-  font-family: sans-serif;
-}
-.sessions{
-  margin-top: 2rem;
-  border-radius: 12px;
-  position: relative;
-}
-li{
-  padding-bottom: 1.5rem;
-  border-left: 1px solid #abaaed;
-  position: relative;
-  padding-left: 20px;
-  margin-left: 10px;
-  &:last-child{
-    border: 0px;
-    padding-bottom: 0px;
-  }
-
-  &:before{
-    content: '';
-    width: 15px;
-    height: 15px;
-    background: white;
-    border: 1px solid #4e5ed3;
-    box-shadow: 3px 3px 0px #bab5f8;
-    box-shadow: 3px 3px 0px #bab5f8;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    top: 0px;
+@media (max-width: 500px) {
+  .flex-container {
+    flex-direction: column;
   }
 }
-.time{
-  color: #2a2839;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+.col1{
+    border:#2258de 5px solid;
+    margin:5px;
+    padding:3px;
 }
-p{
-  color: #4f4f4f;
-      font-family: sans-serif;
-  line-height: 1.5;
-  margin-top:0.4rem;
+.col2{
+    border:#2258de 5px solid;
+    margin:5px;
+    padding:3px;
+}
+.col3{
+    border:#2258de 5px solid;
+    margin:5px;
+    padding:3px;
 }
 
     </style>
@@ -120,22 +89,56 @@ p{
 
 <body>
     <!-- STRAT NAVBAR -->
-    <div id="navbar">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="main-menu">
+    <div id="navbar ">
+        <nav class="navbar navbar-expand-lg navbar-white fixed-top navbar-custom sticky sticky-dark bg-light" id="main-menu">
             <div class="container">
                 <!-- LOGO -->
                 <a class="navbar-brand logo text-uppercase" href="index.html">
-                    <img src="images/logo-light.png" class="logo-light" alt="" height="22">
-                    <img src="images/logo-dark.png" class="logo-dark" alt="" height="22">
+                    <img src="images/logo-dark.png" alt="" height="22" />
                 </a>
-           
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-center mx-auto" id="navbar-navlist">
+                        <li class="nav-item">
+                            <a data-scroll href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#services" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#pricing" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#testimonial" class="nav-link">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#team" class="nav-link">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#blog" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav-button">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <button type="button" class="btn btn-primary navbar-btn btn-rounded">Try it
+                                    Free</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
-    <!-- END NAVBAR -->
 
     <!--START HOME-->
-    <section class=" section  " id="home">
+    <section class=" section bg-light" id="home">
         <div class="bg-overlay home-container"></div>
         <div class="container">
 
@@ -143,9 +146,6 @@ p{
                 <div class="col-lg-5 text-center">
                     <h1 class="home-title text-blue">Enterprise learning, training, <br>and development.
                     </h1>
-                </div>
-                <div class="col-lg-5 text-center">
-                    <img class="home-image" src="../HTML/images/bg-3.png" alt="medical">
                 </div>
             </div>
         </div>
@@ -156,80 +156,103 @@ p{
     <!-- START CLIENT LOGO -->
     <section class="section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="title-box text-center">
-                        <h3><span class="text-primary">Medical Laboratory Equipment Testing</span></h3>
-                        <p class="text-muted mt-3 mb-5">Our customized and tailor-made training programs help you to ensure your equipment compliance with the latest revision of
-                            61010. We offer specialized training in the areas of product non-compliance. Risk Management is a key component in your
-                            product evaluation to 61010-1, Third Edition and involves a three-step risk assessment including Risk Analysis, Risk Evaluation
-                            and Risk Reduction. Determine which risk management compliance method is right for your equipment; here are some
-                            examples from Clause 17 of 61010-1, Third Edition:</p>
-                            <div class="typewriter-container">
-                               <h5 class="f-13 text-blue"><big class="f-50">"</big>   IEC 61010 Series: Master the Challenge <br>and Keep Up with the Changes<br></h5>
-                                <h5 class="f-13 text-blue"><br>IEC 61010 Series White Paper</h5>
-                                <h5 class="f-13 text-blue"><br>Download our White Paper</h5><br>
-                                <h5 class="f-13 text-blue">ANSI B11.TR3</h5>
-                                <h5 class="f-13 text-blue">IEC 61508</h5>
-                                <h5 class="f-13 text-blue">ISO 14121-1</h5>
-                                <h5 class="f-13 text-blue">ISO 14971</h5>
-                                <h5 class="f-13 text-blue">SEMI S10-1296</h5>
-                                <h5 class="f-13 text-blue">IEC 61010-1 </h5>
-                                <h5 class="f-13 text-blue">IEC 61010-2-101</h5>
-                                <h5 class="f-13 text-blue">IEC 60825-1</h5>
-                                <h5 class="f-13 text-blue">EMC/EMI Standards IEC 61326-1</h5>
-                                <h5 class="f-13 text-blue">IEC 61326-2-6</h5>
-                                <h5 class="f-13 text-blue">IEC 60601-1-2  <big class="f-50">"</big></h5>
+             <div class="title-box text-center">
+                    <div class="row justify-content-center">
+                        <div class="flex-container ">
+                            <div class="col-md-3">
+                                <div style="flex-grow: 2" class="f-13 text-muted col1"><b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                    for your regulatory compliance learning and development goals</b>
+                                </div>
+                          </div>
+                           
+                        <div class="col-md-3">
+                            <div style="flex-grow: 2" class="f-13 text-muted col2">
+                                <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                    for your regulatory compliance learning and development goals</b>
                             </div>
-                            <p class="text-muted mt-5">We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
-                                for your regulatory compliance learning and development goals</p>
-                    </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="flex-grow: 2" class="f-13 text-muted col3">
+                                <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                    for your regulatory compliance learning and development goals</b>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="flex-grow: 2" class="f-13 text-muted col3">
+                                <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                    for your regulatory compliance learning and development goals</b>
+                            </div>
+                        </div>
+                    </div>   
                 </div>
+                <div class="row justify-content-center ">
+                    <h1 class="mt-7">Popular learning tracks</h1>
+                    <div class="flex-container ">
+                        <div class="col-md-3">
+                            <div style="flex-grow: 2" class="f-13 text-muted col1"><b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                            </div>
+                      </div>
+                       
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col2">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col3">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col3">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    </div>
+                </div>   
+                <div class="row justify-content-center ">
+                    <div class="flex-container ">
+                        <div class="col-md-3">
+                            <div style="flex-grow: 2" class="f-13 text-muted col1"><b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                            </div>
+                      </div>
+                       
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col2">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col3">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div style="flex-grow: 2" class="f-13 text-muted col3">
+                            <b>We also offer in-person training programs for on-site delivery. Our enterprise solutions provide a flexible, cost-effective solution
+                                for your regulatory compliance learning and development goals</b>
+                        </div>
+                    </div>
+                    
+                </div> 
+            
             </div>
-
+            </div>
         </div>
     </section>
     <!-- END CLIENT LOGO -->
 
     <div class="section p-0 body-bg">
-        <div class="container ">
-            <div class="row justify-content-center">
-                <div class="col-md-7">
-                    <div class="timeline-container">
-                        <div class="wrapper">
-                          <ul class="sessions">
-                            <li>
-                              <div class="time"><b>IEC-61010-1</b></div>
-                              <p class="mt-4 text-blue"><B>Key Goal: </B>To ensure that impact of any hazards 
-                                are at a tolerable level to the operators
-                                 or any surrounding element.</p>
-                            </li>
-                            <li>
-                                <div class="time"><b>IEC-61010-2-010</b></div>
-                            </li>
-                            <li>
-                                <div class="time"><b>IEC-61010-2-081</b></div>
-                            </li>
-                            <li>
-                                <div class="time"><b>IEC-61010-2-101</b></div>
-                                <p class="mt-4 text-blue"><B>Broader Goal: </B>To ensure that impact of any hazards 
-                                    are at a tolerable level to the operators
-                                     or any surrounding element.</p>
-                            </li>
-                            <li>
-                                <div class="time"><b>IEC-61010-2-ABC</b></div>
-                            </li>
-                            <li>
-                                <div class="time"><b>IEC-61010-1</b></div>
-                                <p class="mt-4 text-blue"><B>Supplementary Goal: </B>To aid manufacturers to comply 
-                                    with regulatory requirements in their target countries.</p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div> 
-                </div>
-            </div>
-        </div>
+        <div class="container">
+           
+          </div>
     </div>
 
     <!-- START SERVICES -->
